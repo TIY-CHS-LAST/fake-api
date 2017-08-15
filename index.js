@@ -14,7 +14,7 @@ const {
 module.exports = () => {
   const people = []
   const cats = []
-  const sandbox = [ { name: name.firstName() } ]
+  const sandbox = [ { id: random.uuid(), name: name.firstName() } ]
 
   times(
     n => {
@@ -33,6 +33,7 @@ module.exports = () => {
   times(
     n => {
       cats.push({
+        id: random.uuid(),
         name: name.firstName(),
         pic: image.cats(),
         title: name.title(),
